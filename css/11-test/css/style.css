@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* فرم کلی */
+.login-box {
+  width: 400px;
+  background-color: rgb(255, 8, 0);
+  padding: 40px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+/* ورودی‌ها */
+.my-input {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  font-size: 20px;
+  outline-color: aquamarine;
+}
+
+/* دکمه */
+.my-button {
+  width: 100%;
+  padding: 16px;
+  background-color: #FB8C00;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px red;
+  border: 2px solid rgb(0, 255, 17);
+}
+
+
+.my-button:hover{
+  
+  outline: 2px solid rgb(255, 0, 212);
+}

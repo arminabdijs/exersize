@@ -1,0 +1,73 @@
+/* شکل هدر رزومه */
+.mybg {
+  width: 800px;
+  height: 500px;
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  background-color: #eb479e;
+  margin: 20px auto;
+}
+
+.mybg h1 {
+  color: aquamarine;
+  text-align: center;
+  padding-top: 180px;
+  font-size: 45px;
+  text-shadow: 2px 2px 2px red;
+}
+
+/* بدنه اصلی */
+.container {
+  width: 60%;
+  margin: 40px auto;
+  background-color: aqua;
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* عنوان هر بخش */
+.section-title {
+  color: blueviolet;
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* متن پاراگراف‌ها */
+.paragraph {
+  font-size: 22px;
+  color: rgb(255, 0, 132);
+  text-indent: 50px;
+  line-height: 45px;
+  margin-bottom: 30px;
+  border: 1px dotted red;
+  padding: 20px;
+  text-shadow: 1px 1px 1px gray;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  text-align: justify;
+}
+
+/* فوتر */
+.footer-box {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 8, 0);
+  margin: 50px auto;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 20px;
+  color: white;
+  border-radius: 10px;
+}

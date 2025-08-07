@@ -1,0 +1,68 @@
+/* Element selector */
+p {
+  font-size: 45px;
+  color: aquamarine;
+}
+
+/* ID selector */
+#mytext {
+  color: blue;
+}
+
+/* Class selector */
+.myclass {
+  color: green;
+}
+
+/* Combination: element + class */
+p.myclass {
+  background-color: brown;
+}
+
+/* All elements selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Grouping selector */
+h1, h2 {
+  font-family: "JetBrains Mono", sans-serif;
+  color: aqua;
+}
+
+/* Descendant selector */
+.mysection .content-1,
+.mysection .content-2 {
+  color: red;
+}
+
+/* Child selector */
+.mysection > div {
+  background-color: lightgreen;
+}
+
+/* Adjacent sibling */
+h1 + h2 {
+  color: yellow;
+}
+
+/* General sibling */
+h1 ~ h2 {
+  font-style: italic;
+}
+
+/* Background image section */
+.mybg {
+  width: 800px;
+  height: 800px;
+  background-image: url("../images/1904105.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+/* h1 inside background section */
+.mybg h1 {
+  color: aquamarine;
+}

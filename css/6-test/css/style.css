@@ -1,0 +1,64 @@
+body {
+  background-color: #111;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 60px;
+}
+
+/* کارت کلی */
+.card {
+  width: 700px;
+  min-width: 300px;
+  margin: auto;
+  padding: 40px;
+  background: url("../images/1904105.jpg") no-repeat fixed center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
+  border-radius: 40px 10px 40px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+}
+
+/* عکس با گوشه‌های خاص */
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50% 0 50% 0;
+  border: 4px solid #fb8c00;
+  margin-bottom: 20px;
+}
+
+/* عنوان */
+#name {
+  font-size: 38px;
+  color: aquamarine;
+  text-shadow: 3px 3px 5px red;
+  text-transform: uppercase;
+}
+
+/* زیرعنوان */
+.subtitle {
+  font-size: 24px;
+  color: #ffe600;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  word-spacing: 10px;
+  letter-spacing: 2px;
+}
+
+/* توضیحات */
+.card > .bio {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 18px;
+  border: 3px dashed #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  line-height: 30px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}

@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 45px;
+}
+
+#mytext {
+    color: blue;
+}
+
+p.myclass {
+    color: green;
+    background-color: brown;
+}
+
+.mysection .content-1,
+.mysection .content-2 {
+    color: red;
+    background-color: lightgreen;
+
+}
+
+h1+h2 {
+    color: yellow;
+}
+
+.mybg{
+    width: 800px;
+    height: 800px;
+    background: url("../images/1904105.jpg") no-repeat fixed center;
+    background-size: 100%;
+}

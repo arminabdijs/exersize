@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+/* استایل عمومی کارت‌ها */
+.card {
+  width: 300px;
+  height: 250px;
+  background-color: #fb8c00;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 2px red;
+}
+
+/* استفاده از + برای هدف‌گیری مستقیم کارت بعدی */
+.card + .card {
+  background-color: #eb479e;
+clip-path: polygon(70.71% 100%, 100% 70.71%, 100% 29.29%, 70.71% 0%, 29.29% 0%, 0% 29.29%, 0% 70.71%, 29.29% 100%);
+}
+
+/* کارت آخر با ~ انتخاب میشه */
+.card ~ .cl3 {
+  background-color: aquamarine;
+}
+
+/* متن‌ها */
+.paragraph {
+  font-size: 25px;
+  border: 1px solid red;
+  margin: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px red;
+}

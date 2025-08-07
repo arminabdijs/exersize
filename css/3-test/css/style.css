@@ -1,0 +1,89 @@
+/* Element selector */
+p {
+  font-size: 22px;
+  color: rgb(255, 0, 132);
+}
+
+/* ID selector */
+#main-heading {
+  color: blue;
+  text-align: center;
+}
+
+/* Class selector */
+.myclass {
+  color: green;
+}
+
+p.myclass {
+  background-color: brown;
+}
+
+/* All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grouping */
+h1, h2 {
+  font-family: "JetBrains Mono", sans-serif;
+  color: aqua;
+}
+
+/* element element */
+.mysection .content-1, .mysection .content-2 {
+  color: red;
+}
+
+/* element > element */
+.mysection > div {
+  background-color: lightgreen;
+  margin: 10px 0;
+}
+
+/* element1 + element2 */
+h1 + h2 {
+  color: yellow;
+}
+
+/* element1 ~ element2 */
+h1 ~ h2 {
+  background-color: #222;
+}
+
+/* Color */
+.paragraph {
+  color: #ffde22;
+  font-size: 1.5em;
+  border: 5px double #de0c0c;
+  background-color: #ff0084;
+}
+
+/* Background image + clip-path */
+.mybg {
+  width: 800px;
+  height: 800px;
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  background:rgb(255, 0, 144) url("../images/wp1904105-developer-wallpapers.jpg") no-repeat fixed center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.mybg h1 {
+  text-align: center;
+  padding: 40px;
+  color: aquamarine;
+}

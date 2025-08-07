@@ -1,0 +1,67 @@
+/* Background with clip-path */
+.mybg {
+  width: 800px;
+  height: 800px;
+  clip-path: polygon(
+    50% 2.45%,
+    61.8% 38.77%,
+    100% 38.77%,
+    69.1% 61.23%,
+    80.9% 97.55%,
+    50% 75.1%,
+    19.1% 97.55%,
+    30.9% 61.23%,
+    0% 38.77%,
+    38.2% 38.77%
+  );
+  background-color: #eb479e;
+}
+
+.mybg h1 {
+  color: aquamarine;
+  text-align: center;
+  padding-top: 300px;
+  font-size: 45px;
+  text-shadow: 2px 2px 2px red;
+}
+
+/* Main container */
+.container {
+  width: 50%;
+  margin: 50px auto;
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Section Titles */
+.section-title {
+  color: blueviolet;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.paragraph {
+  font-size: 22px;
+  color: rgb(255, 0, 132);
+  text-indent: 50px;
+  line-height: 45px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  border: 1px dashed red;
+  padding: 20px;
+}
+
+/* Footer */
+.footer-box {
+  width: 300px;
+  height: 100px;
+  background-color: rgb(255, 8, 0);
+  margin: 50px auto;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 20px;
+  color: white;
+}

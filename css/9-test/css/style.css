@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+h1, h2 {
+  text-align: center;
+  text-shadow: 2px 2px 2px red;
+}
+
+.card-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  width: 400px;
+  background-color: #FB8C00;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 50px auto;
+}
+
+.paragraph {
+  font-size: 30px;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid red;
+  text-shadow: 2px 2px 2px red;
+  max-width: 500px;
+  min-width: 300px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* فقط برای تفاوت ظاهری بین کارت‌ها */
+.member1 {
+  background-color: #FB8C00;
+}
+
+.member2 {
+  background-color: #eb479e;
+}
+
+.member3 {
+  background-color: #979802;
+}
