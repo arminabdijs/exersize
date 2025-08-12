@@ -1,0 +1,78 @@
+* {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+/* بخش فروشگاه */
+.store {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 30px;
+}
+
+/* کارت محصول */
+.product-card {
+  width: 280px;
+  padding: 20px;
+  background-color: black;
+  color: aquamarine;
+  text-align: center;
+  outline: 6px double red;
+  outline-offset: 10px;
+}
+
+/* هاور روی کل کارت */
+.product-card:hover {
+  outline: 6px dashed yellow;
+  outline-offset: 20px;
+}
+
+/* عنوان محصول */
+.product-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+  outline: 3px solid yellow;
+  outline-offset: 5px;
+}
+
+/* قیمت */
+.product-price {
+  font-size: 20px;
+  color: yellow;
+  margin-bottom: 15px;
+}
+
+/* توضیحات */
+.product-desc {
+  font-size: 15px;
+  margin-bottom: 20px;
+  outline: 2px dashed aquamarine;
+  outline-offset: 6px;
+  padding: 10px;
+}
+
+/* دکمه خرید */
+.buy-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #fb8c00;
+  color: white;
+  outline: 3px solid white;
+  outline-offset: 5px;
+  text-transform: uppercase;
+}
+
+/* هاور روی دکمه */
+.buy-btn:hover {
+  outline: 4px dashed red;
+  outline-offset: 10px;
+  background-color: yellow;
+  color: black;
+}
+
+/* کلیک روی دکمه */
+.buy-btn:active {
+  outline: 4px dotted aquamarine;
+  outline-offset: 12px;
+}

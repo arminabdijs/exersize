@@ -1,141 +1,142 @@
 <!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>پروژه تمرینی آرمین - نسخه جذاب‌تر</title>
-  <style>
-    body {
-      font-family: IRANSansX, sans-serif;
-      background-color: #89f7fe;
-      margin: 0;
-      padding: 30px 10px;
-      color: #222;
-      direction: rtl;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 25px;
-      padding: 25px 30px;
-    }
+      body {
+        font-family: IRANSansX, sans-serif;
+        background-color: #89f7fe;
+        direction: rtl;
+      }
 
-    h2 {
-      text-align: center;
-      color: #3b3b98;
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
+      .container {
+        width: 900px;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 25px;
+        padding: 25px 30px;
+      }
+      h2 {
+        text-align: center;
+        color: #3b3b98;
+        margin-bottom: 25px;
+      }
 
-    .image-box {
-      text-align: center;
-      margin-bottom: 25px;
-    }
+      .image-box {
+        text-align: center;
+        margin-bottom: 25px;
+      }
 
-    .image-box img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50% 20%;
-      box-shadow: 0 4px 15px rgba(59,59,152,0.5);
-    
-    }
+      .image-box img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50% 20%;
+      }
 
-    
+      .box {
+        background-color: #f5f7ff;
+        border-radius: 18px;
+        padding: 18px 22px;
+        margin-bottom: 18px;
+        font-size: 18px;
+      }
+      pre {
+        background-color: #222;
+        color: #70ffb8;
+        border-radius: 14px;
+        padding: 16px 20px;
+        margin: 20px 0;
+      }
 
-    .box {
-      background-color: #f5f7ff;
-      border-radius: 18px;
-      padding: 18px 22px;
-      margin-bottom: 25px;
-      font-size: 18px;
-    }
+      code,
+      kbd,
+      var,
+      samp {
+        display: block;
+        background-color: #222;
+        color: #70ffb8;
+        padding: 12px 18px;
+        border-radius: 12px;
+        margin: 12px 0;
+      }
 
-    pre {
-      background: #222;
-      color: #70ffb8;
-      border-radius: 14px;
-      padding: 16px 20px;
-      direction: ltr;
-      margin: 20px 0;
-    }
+      video {
+        display: block;
+        margin: 30px auto;
+        width: 320px;
+        border-radius: 25px 15px 50px 10px;
+      }
 
-    code, samp, var, kbd {
-      display: block;
-      background-color: #222;
-      color: #70ffb8;
-      padding: 12px 18px;
-      border-radius: 12px;
-      margin: 12px 0;
-    }
+      ul {
+        padding-left: 15px;
+        margin-top: 25px;
+        font-size: 22px;
+        text-align: center;
+      }
 
-    ul {
-      padding-left: 15px;
-      margin-top: 25px;
-      font-size: 22px;
-      color: #444;
-      text-align: center;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0 15px;
-      color: #3b3b98;
-    }
-
-    video {
-      display: block;
-      margin: 30px auto;
-      width: 320px;
-      border-radius: 25px 15px 50px 10px;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 15px;
-      color: #3b3b98;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h2>تمرین پروژه HTML و CSS - نسخه جذاب‌تر</h2>
-
-    <div class="image-box">
-      <img src="./assets/images/302012993_514401300604466_768154784961560815_n.png" alt="تصویر نمونه" />
-    </div>
-
-    <div class="box" dir="rtl">
-      <p>برای کپی یک متن از کلید ترکیبی <kbd>Ctrl + C</kbd> استفاده کنید.</p>
-    </div>
-
-    <div class="box">
-      <pre>
+      li {
+        display: inline-block;
+        margin: 0 15px;
+        color: #3b3b98;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 15px;
+        color: #3b3b98;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>تمرین پروژه HTML و CSS - نسخه جذاب‌تر</h2>
+      <div class="image-box">
+        <img
+          src="./assets/images/302012993_514401300604466_768154784961560815_n.png"
+          alt="تصویر نمونه"
+        />
+      </div>
+      <div class="box">
+        <p>برای کپی یک متن از کلید ترکیبی 
+          <kbd>Ctrl + C</kbd> 
+                        استفاده کنید.</p>
+      </div>
+      <div class="box" dir="ltr">
+        <pre>
 function hello() {
     console.log("Welcome to Armin's Project!");
 }
 hello();
-      </pre>
+      </pre
+        >
+      </div>
+      <code>console.log("کد نمونه")</code>
+      <samp>"نتیجه کد: Welcome"</samp>
+      <var>var x = 42;</var>
+
+      <video
+        src="./assets/videos/videoplayback.mp4"
+        controls
+        preload="metadata"
+        poster="./assets/images/images.png"
+      >
+        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+      </video>
+
+      <ul>
+        <li>&copy;</li>
+        <li>&reg;</li>
+      </ul>
+
+      <div class="footer">ساخته شده با ❤️ توسط آرمین</div>
     </div>
-
-    <code>console.log("کد نمونه")</code>
-    <samp>"نتیجه کد: Welcome"</samp>
-    <var>var x = 42;</var>
-
-    <video src="./assets/videos/videoplayback.mp4" controls preload="metadata" poster="./assets/images/images.png">
-      مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-    </video>
-
-    <ul>
-      <li>&copy;</li>
-      <li>&reg;</li>
-    </ul>
-
-    <div class="footer">
-      ساخته شده با ❤️ توسط آرمین
-    </div>
-  </div>
-</body>
+  </body>
 </html>
