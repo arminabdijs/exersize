@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>تمرین عملی - رسانه و محتوای تعاملی</title>
+    <style>
+      body {
+        font-family: Tahoma;
+        background-color: #f8f9fa;
+        margin: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: darkblue;
+        margin-bottom: 30px;
+      }
+
+      .section {
+        margin: 40px 0;
+        padding: 20px;
+        border: 2px solid #aaa;
+        border-radius: 12px;
+        background-color: white;
+      }
+
+      iframe {
+        border-radius: 10px;
+      }
+
+      audio {
+        margin-top: 15px;
+      }
+
+      svg {
+        margin-top: 20px;
+        width: 100px;
+        color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>تمرین عملی: کار با تگ‌های رسانه‌ای</h1>
+
+    <!-- بخش پخش صدا -->
+    <div class="section">
+      <h2>🎵 بخش موسیقی</h2>
+      <p>یک آهنگ کوتاه که به صورت خودکار پخش می‌شود:</p>
+      <audio src="./audio/Imagine Dragons Enemy (feat. JID) 320.mp3" autoplay controls loop muted></audio>
+    </div>
+
+    <!-- بخش iframe -->
+    <div class="section">
+      <h2>🌐 بخش نمایش صفحه وب</h2>
+      <p>در این قسمت، مقاله ویکی‌پدیا درباره HTML داخل iframe نمایش داده می‌شود:</p>
+      <iframe
+        src="https://fa.wikipedia.org/wiki/%D8%A7%DA%86%E2%80%8C%D8%AA%DB%8C%E2%80%8C%D8%A7%D9%85%E2%80%8C%D8%A7%D9%84"
+        width="560"
+        height="315"
+        frameborder="0"
+      ></iframe>
+    </div>
+
+    <!-- بخش SVG -->
+    <div class="section">
+      <h2>🎨 بخش گرافیک SVG</h2>
+      <p>یک آیکون ساده طراحی‌شده با SVG:</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+        />
+      </svg>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(240, 248, 255);
+      padding: 30px;
+    }
+    h2 {
+      text-align: center;
+      color: darkblue;
+    }
+    form {
+      width: fit-content;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border: 2px solid navy;
+      border-radius: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: darkslategray;
+    }
+    input {
+     width: 400px;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid gray;
+      border-radius: 8px;
+    }
+    button {
+      display: block;
+      background-color: navy;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Attributes Practice</h2>
+  <form action="" method="post" target="_blank" autocomplete="on">
+    
+    <!-- معمولی -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Enter username" minlength="4" maxlength="10" />
+    
+    <!-- readonly -->
+    <label for="readonly">Readonly Field:</label>
+    <input type="text" id="readonly" name="readonly" value="Only View" readonly />
+    
+    <!-- disabled -->
+    <label for="disabled">Disabled Field:</label>
+    <input type="text" id="disabled" name="disabled" placeholder="Can't type here" disabled />
+    
+    <!-- autofocus -->
+    <label for="autofocus">Autofocus Field:</label>
+    <input type="text" id="autofocus" name="autofocus" placeholder="Focused on load" autofocus />
+    
+    <!-- pattern -->
+    <label for="pattern">Pattern (Word + Word):</label>
+    <input type="text" id="pattern" name="pattern" placeholder="e.g. Armin Abdi" pattern="(\w{3,16})([ ]{0,3})(\w{3,16})" required />
+    
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
