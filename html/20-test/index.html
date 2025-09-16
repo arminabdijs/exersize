@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>تمرین کامل HTML سمانتیک</title>
+    <style>
+        body {
+            font-family: IRANSansX, sans-serif;
+            font-size: 16px;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 900px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 25px;
+            padding: 25px 30px;
+        }
+
+        .header-section {
+            text-align: center;
+            background-color: aqua;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .search-input {
+            padding: 12px 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            width: 350px;
+            margin-bottom: 20px;
+        }
+
+        .nav-links {
+            margin-top: 15px;
+        }
+
+        .nav-links a {
+            background-color: aquamarine;
+            color: blue;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 8px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .content-area {
+            width: 65%;
+        }
+
+        .sidebar-area {
+            width: 300px;
+            background-color: aquamarine;
+            padding: 25px;
+            border-radius: 18px;
+            height: fit-content;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3b3b98;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        h2 {
+            color: red;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: rgb(0, 132, 255);
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content-box {
+            background-color: #f5f7ff;
+            border-radius: 18px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(199, 11, 11);
+        }
+
+        .article-card {
+            width: 400px;
+            background-color: aqua;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 2px solid rgb(255, 0, 166);
+            border-radius: 12px;
+        }
+
+        .time-badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-family: monospace;
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .main-image {
+            display: block;
+            margin: 20px auto;
+            width: 300px;
+            height: 200px;
+            border: 2px solid rgb(255, 0, 166);
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .sidebar-image {
+            display: block;
+            margin: 15px auto;
+            width: 200px;
+            height: 150px;
+            border: 1px solid rgb(255, 0, 166);
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .details-section {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .details-header {
+            background-color: #6c757d;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .details-content {
+            padding: 20px;
+            background-color: white;
+        }
+
+        .footer-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f5f7ff;
+            border-radius: 15px;
+            color: #3b3b98;
+        }
+
+        .footer-section a {
+            color: blue;
+            background-color: aquamarine;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .list-section {
+            background-color: #f5f7ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        ul {
+            list-style: circle;
+            padding-right: 30px;
+        }
+
+        li {
+            margin: 8px 0;
+            color: #3b3b98;
+            font-size: 16px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        pre {
+            background-color: #222;
+            color: #70ffb8;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- سر صفحه -->
+    <header class="header-section">
+        <input type="text" class="search-input" placeholder="جستجو در وب‌سایت..." />
+        <nav class="nav-links">
+            <a href="#">صفحه اصلی</a>
+            <a href="#">درباره ما</a>
+            <a href="#">خدمات</a>
+            <a href="#">تماس با ما</a>
+        </nav>
+    </header>
+
+    <!-- بدنه اصلی سایت -->
+    <main class="container">
+        <h1>وب‌سایت آموزش HTML سمانتیک</h1>
+        <p class="content-box">به وب‌سایت جامع آموزش HTML خوش آمدید. در اینجا تمام عناصر سمانتیک را به صورت عملی مشاهده می‌کنید.</p>
+        
+        <div class="main-content">
+            <div class="content-area">
+                <!-- تصویر اصلی با توضیح -->
+                <figure class="image-container">
+                    <img class="main-image" src="./images/Profiling-amico.svg" alt="تصویر آموزشی HTML" />
+                    <figcaption>تصویر نمایشی برای آموزش HTML</figcaption>
+                </figure>
+
+                <!-- بخش‌های مختلف محتوا -->
+                <section class="content-box">
+                    <h2>مقدمه HTML</h2>
+                    <p>HTML زبان نشانه‌گذاری است که برای ساخت صفحات وب استفاده می‌شود.</p>
+                    
+                    <!-- جدول اطلاعات -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>عنصر</th>
+                                <th>کاربرد</th>
+                                <th>نوع</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>header</td>
+                                <td>سر صفحه</td>
+                                <td>سمانتیک</td>
+                            </tr>
+                            <tr>
+                                <td>main</td>
+                                <td>محتوای اصلی</td>
+                                <td>سمانتیک</td>
+                            </tr>
+                            <tr>
+                                <td>footer</td>
+                                <td>پای صفحه</td>
+                                <td>سمانتیک</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="content-box">
+                    <h2>عناصر سمانتیک</h2>
+                    <p>عناصر سمانتیک معنای محتوا را مشخص می‌کنند.</p>
+                    
+                    <!-- لیست ویژگی‌ها -->
+                    <div class="list-section">
+                        <ul>
+                            <li>header برای سر صفحه</li>
+                            <li>nav برای منوی ناوبری</li>
+                            <li>main برای محتوای اصلی</li>
+                            <li>section برای بخش‌بندی محتوا</li>
+                            <li>article برای مقالات</li>
+                            <li>aside برای محتوای جانبی</li>
+                            <li>footer برای پای صفحه</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- مقاله کامل -->
+                <article class="article-card">
+                    <h2>مقاله: اهمیت HTML سمانتیک</h2>
+                    <p>استفاده از عناصر سمانتیک HTML باعث بهبود دسترسی، SEO و خوانایی کد می‌شود. این عناصر به موتورهای جستجو و فناوری‌های کمکی کمک می‌کنند تا محتوا را بهتر درک کنند.</p>
+                    
+                    <!-- نمونه کد -->
+                    <pre>
+&lt;article&gt;
+    &lt;h2&gt;عنوان مقاله&lt;/h2&gt;
+    &lt;p&gt;محتوای مقاله...&lt;/p&gt;
+    &lt;time datetime="2024-01-01"&gt;تاریخ انتشار&lt;/time&gt;
+&lt;/article&gt;
+                    </pre>
+                    
+                    <!-- تاریخ انتشار -->
+                    <time datetime="2024-01-15" class="time-badge">1402/10/25</time>
+                </article>
+
+                <!-- بخش جزئیات قابل گسترش -->
+                <details open class="details-section">
+                    <summary class="details-header">راهنمای تگ‌های HTML</summary>
+                    <div class="details-content">
+                        <p>در این بخش می‌توانید اطلاعات تکمیلی درباره تگ‌های مختلف HTML را مطالعه کنید:</p>
+                        <ul>
+                            <li>&lt;time&gt; برای نمایش تاریخ و زمان</li>
+                            <li>&lt;figure&gt; برای تصاویر با توضیح</li>
+                            <li>&lt;details&gt; برای محتوای قابل باز و بسته شدن</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <!-- تصویر دیگر با توضیح -->
+                <figure class="image-container">
+                    <img class="main-image" src="./images/Browser stats-rafiki.svg" alt="نمودار عناصر سمانتیک" />
+                    <figcaption>نمودار ساختار عناصر سمانتیک HTML</figcaption>
+                </figure>
+            </div>
+
+            <!-- نوار کناری -->
+            <aside class="sidebar-area">
+                <h3>منابع مفید</h3>
+                <p>در این بخش لینک‌های مرتبط و اطلاعات تکمیلی قرار دارد.</p>
+                
+                <!-- تصویر نوار کناری -->
+                <figure>
+                    <img class="sidebar-image" src="./images/Source code-rafiki (1).svg" alt="منابع یادگیری" />
+                    <figcaption>منابع یادگیری HTML</figcaption>
+                </figure>
+                
+                <!-- جزئیات اضافی -->
+                <details class="details-section">
+                    <summary class="details-header">لینک‌های مفید</summary>
+                    <div class="details-content">
+                        <ul>
+                            <li>MDN Web Docs</li>
+                            <li>W3Schools</li>
+                            <li>HTML Validator</li>
+                        </ul>
+                    </div>
+                </details>
+                
+                <!-- زمان آخرین به‌روزرسانی -->
+                <p>آخرین به‌روزرسانی:</p>
+                <time datetime="2024-01-15" class="time-badge">1402/10/25</time>
+            </aside>
+        </div>
+    </main>
+
+    <!-- پای صفحه -->
+    <footer class="footer-section">
+        <p>تمامی حقوق محفوظ است.</p>
+        <p>برای تماس: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>&copy; 2022 وب‌سایت آموزش HTML</p>
+    </footer>
+</body>
+</html>
