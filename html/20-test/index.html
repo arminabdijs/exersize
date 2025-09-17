@@ -1,390 +1,408 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
-    <title>تمرین کامل HTML سمانتیک</title>
+    <meta name="viewport" content="width=2, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        body {
-            font-family: IRANSansX, sans-serif;
-            font-size: 16px;
-            direction: rtl;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        direction: rtl;
+        margin: 0;
+        padding: 0;
+        background-color: #e7e7e7;
+      }
 
-        .container {
-            width: 900px;
-            margin: 30px auto;
-            background-color: #fff;
-            border-radius: 25px;
-            padding: 25px 30px;
-        }
+      /* header */
+      .header {
+        text-align: center;
+        background-color: aqua;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+      }
+      .header__search--input {
+        padding: 12px 20px;
+        border: 1px solid black;
+        border-radius: 8px;
+        width: 350px;
+        margin-bottom: 20px;
+      }
+      .nav--links {
+        margin-top: 15px;
+      }
 
-        .header-section {
-            text-align: center;
-            background-color: aqua;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
+      .nav--links a {
+        background-color: aquamarine;
+        color: blue;
+        text-decoration: none;
+        padding: 12px 25px;
+        margin: 0 10px;
+        border-radius: 8px;
+        font-size: 16px;
+        display: inline-block;
+      }
 
-        .search-input {
-            padding: 12px 20px;
-            border: 1px solid black;
-            border-radius: 8px;
-            width: 350px;
-            margin-bottom: 20px;
-        }
+      /* main */
+      .container {
+        width: 900px;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 25px;
+        padding: 25px 30px;
+      }
 
-        .nav-links {
-            margin-top: 15px;
-        }
+      .container__title {
+        text-align: center;
+        color: #3b3b98;
+        margin-bottom: 25px;
+        font-size: 28px;
+      }
 
-        .nav-links a {
-            background-color: aquamarine;
-            color: blue;
-            text-decoration: none;
-            padding: 12px 25px;
-            margin: 0 10px;
-            border-radius: 8px;
-            font-size: 16px;
-            display: inline-block;
-        }
+      .container__paragraph {
+        background-color: #f5f7ff;
+        border-radius: 18px;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(199, 11, 11);
+      }
 
-        .main-content {
-            display: flex;
-            gap: 40px;
-            margin-top: 30px;
-        }
+      .container__content {
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+      }
 
-        .content-area {
-            width: 65%;
-        }
+      .content__main {
+        width: 65%;
+      }
 
-        .sidebar-area {
-            width: 300px;
-            background-color: aquamarine;
-            padding: 25px;
-            border-radius: 18px;
-            height: fit-content;
-        }
+      .content__sidebar {
+        width: 300px;
+        background-color: aquamarine;
+        padding: 25px;
+        border-radius: 18px;
+        height: fit-content;
+      }
 
-        h1 {
-            text-align: center;
-            color: #3b3b98;
-            margin-bottom: 25px;
-            font-size: 28px;
-        }
+      .content__main--image {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .main__image {
+        display: block;
+        margin: 20px auto;
+        width: 300px;
+        height: 200px;
+        border: 2px solid rgb(255, 0, 166);
+        border-radius: 10px;
+        background-color: #f8f9fa;
+      }
 
-        h2 {
-            color: red;
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
+      figcaption {
+        margin-top: 10px;
+        font-style: italic;
+        color: #666;
+        text-align: center;
+        font-size: 14px;
+      }
 
-        h3 {
-            color: rgb(0, 132, 255);
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
+      .content__box {
+        background-color: #f5f7ff;
+        border-radius: 18px;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(199, 11, 11);
+      }
 
-        .content-box {
-            background-color: #f5f7ff;
-            border-radius: 18px;
-            padding: 20px 25px;
-            margin-bottom: 20px;
-            border: 1px solid rgb(199, 11, 11);
-        }
+      .content__title {
+        color: red;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
 
-        .article-card {
-            width: 400px;
-            background-color: aqua;
-            padding: 20px;
-            margin-bottom: 25px;
-            border: 2px solid rgb(255, 0, 166);
-            border-radius: 12px;
-        }
+      .content__box--table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background-color: white;
+      }
 
-        .time-badge {
-            background-color: #e74c3c;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-family: monospace;
-            display: inline-block;
-            margin-top: 15px;
-            font-size: 14px;
-        }
+      .content__box--table th,
+      td {
+        padding: 12px;
+        border: 1px solid black;
+        text-align: center;
+      }
 
-        .image-container {
-            text-align: center;
-            margin: 25px 0;
-        }
+      .content__box--table th {
+        background-color: #f0f0f0;
+      }
 
-        .main-image {
-            display: block;
-            margin: 20px auto;
-            width: 300px;
-            height: 200px;
-            border: 2px solid rgb(255, 0, 166);
-            border-radius: 10px;
-            background-color: #f8f9fa;
-        }
+      .content__box--list {
+        background-color: #f5f7ff;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 20px 0;
+      }
 
-        .sidebar-image {
-            display: block;
-            margin: 15px auto;
-            width: 200px;
-            height: 150px;
-            border: 1px solid rgb(255, 0, 166);
-            border-radius: 8px;
-            background-color: #f8f9fa;
-        }
+      .content__box--list ul {
+        list-style: circle;
+        padding-right: 30px;
+      }
 
-        figcaption {
-            margin-top: 10px;
-            font-style: italic;
-            color: #666;
-            text-align: center;
-            font-size: 14px;
-        }
+      .content__box--list li {
+        margin: 8px 0;
+        color: #3b3b98;
+        font-size: 16px;
+      }
 
-        .details-section {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 12px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
+      .article__card {
+        width: 400px;
+        background-color: aqua;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 2px solid rgb(255, 0, 166);
+        border-radius: 12px;
+      }
 
-        .details-header {
-            background-color: #6c757d;
-            color: white;
-            padding: 15px 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
+      pre {
+        background-color: #222;
+        color: #70ffb8;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        font-family: monospace;
+        overflow-x: auto;
+      }
 
-        .details-content {
-            padding: 20px;
-            background-color: white;
-        }
+      .time__badge {
+        background-color: #e74c3c;
+        color: white;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-family: monospace;
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 14px;
+      }
 
-        .footer-section {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            background-color: #f5f7ff;
-            border-radius: 15px;
-            color: #3b3b98;
-        }
+      .content__details {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        margin: 20px 0;
+      }
 
-        .footer-section a {
-            color: blue;
-            background-color: aquamarine;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+      .details__header {
+        background-color: #6c757d;
+        color: white;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 10px;
+      }
 
-        .list-section {
-            background-color: #f5f7ff;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-        }
+      .details__content {
+        padding: 20px;
+        background-color: white;
+      }
+      .details__content ul {
+        list-style: circle;
+        padding-right: 30px;
+      }
+      .details__content li {
+        margin: 8px 0;
+        color: #3b3b98;
+        font-size: 16px;
+      }
 
-        ul {
-            list-style: circle;
-            padding-right: 30px;
-        }
+      /* sidebar */
+      .content__sidebar h3 {
+        color: rgb(0, 132, 255);
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
 
-        li {
-            margin: 8px 0;
-            color: #3b3b98;
-            font-size: 16px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-        }
-
-        th, td {
-            padding: 12px;
-            border: 1px solid black;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f0f0f0;
-            font-weight: bold;
-        }
-
-        pre {
-            background-color: #222;
-            color: #70ffb8;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-            font-family: monospace;
-            overflow-x: auto;
-        }
+      /* footer */
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 30px;
+        border-radius: 15px;
+        color: #3b3b98;
+      }
+      .footer a {
+        color: blue;
+        background-color: aquamarine;
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
     </style>
-</head>
-<body>
-    <!-- سر صفحه -->
-    <header class="header-section">
-        <input type="text" class="search-input" placeholder="جستجو در وب‌سایت..." />
-        <nav class="nav-links">
-            <a href="#">صفحه اصلی</a>
-            <a href="#">درباره ما</a>
-            <a href="#">خدمات</a>
-            <a href="#">تماس با ما</a>
-        </nav>
+  </head>
+  <body>
+    <header class="header">
+      <input
+        type="text"
+        class="header__search--input"
+        placeholder="جستجو در وب‌سایت..."
+      />
+      <nav class="nav--links">
+        <a href="#">صفحه اصلی</a>
+        <a href="#">درباره ما</a>
+        <a href="#">خدمات</a>
+        <a href="#">تماس با ما</a>
+      </nav>
     </header>
 
-    <!-- بدنه اصلی سایت -->
     <main class="container">
-        <h1>وب‌سایت آموزش HTML سمانتیک</h1>
-        <p class="content-box">به وب‌سایت جامع آموزش HTML خوش آمدید. در اینجا تمام عناصر سمانتیک را به صورت عملی مشاهده می‌کنید.</p>
-        
-        <div class="main-content">
-            <div class="content-area">
-                <!-- تصویر اصلی با توضیح -->
-                <figure class="image-container">
-                    <img class="main-image" src="./images/Profiling-amico.svg" alt="تصویر آموزشی HTML" />
-                    <figcaption>تصویر نمایشی برای آموزش HTML</figcaption>
-                </figure>
+      <h1 class="container__title">وب‌سایت آموزش HTML</h1>
+      <p class="container__paragraph">
+        به وب‌سایت جامع آموزش HTML خوش آمدید. در اینجا تمام عناصر سمانتیک را به
+        صورت عملی مشاهده می‌کنید.
+      </p>
+      <div class="container__content">
+        <div class="content__main">
+          <figure class="content__main--image">
+            <img
+              class="main__image"
+              src="./images/Profiling-amico.svg"
+              alt="تصویر آموزشی HTML"
+            />
+            <figcaption>تصویر نمایشی برای آموزش HTML</figcaption>
+          </figure>
 
-                <!-- بخش‌های مختلف محتوا -->
-                <section class="content-box">
-                    <h2>مقدمه HTML</h2>
-                    <p>HTML زبان نشانه‌گذاری است که برای ساخت صفحات وب استفاده می‌شود.</p>
-                    
-                    <!-- جدول اطلاعات -->
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>عنصر</th>
-                                <th>کاربرد</th>
-                                <th>نوع</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>header</td>
-                                <td>سر صفحه</td>
-                                <td>سمانتیک</td>
-                            </tr>
-                            <tr>
-                                <td>main</td>
-                                <td>محتوای اصلی</td>
-                                <td>سمانتیک</td>
-                            </tr>
-                            <tr>
-                                <td>footer</td>
-                                <td>پای صفحه</td>
-                                <td>سمانتیک</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
+          <section class="content__box">
+            <h2 class="content__title">مقدمه HTML</h2>
+            <p class="content__paragraph">
+              HTML زبان نشانه‌گذاری است که برای ساخت صفحات وب استفاده می‌شود.
+            </p>
 
-                <section class="content-box">
-                    <h2>عناصر سمانتیک</h2>
-                    <p>عناصر سمانتیک معنای محتوا را مشخص می‌کنند.</p>
-                    
-                    <!-- لیست ویژگی‌ها -->
-                    <div class="list-section">
-                        <ul>
-                            <li>header برای سر صفحه</li>
-                            <li>nav برای منوی ناوبری</li>
-                            <li>main برای محتوای اصلی</li>
-                            <li>section برای بخش‌بندی محتوا</li>
-                            <li>article برای مقالات</li>
-                            <li>aside برای محتوای جانبی</li>
-                            <li>footer برای پای صفحه</li>
-                        </ul>
-                    </div>
-                </section>
+            <table class="content__box--table">
+              <thead>
+                <tr>
+                  <th>عنصر</th>
+                  <th>کاربرد</th>
+                  <th>نوع</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>header</td>
+                  <td>سر صفحه</td>
+                  <td>سمانتیک</td>
+                </tr>
+                <tr>
+                  <td>main</td>
+                  <td>محتوای اصلی</td>
+                  <td>سمانتیک</td>
+                </tr>
+                <tr>
+                  <td>footer</td>
+                  <td>پای صفحه</td>
+                  <td>سمانتیک</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-                <!-- مقاله کامل -->
-                <article class="article-card">
-                    <h2>مقاله: اهمیت HTML سمانتیک</h2>
-                    <p>استفاده از عناصر سمانتیک HTML باعث بهبود دسترسی، SEO و خوانایی کد می‌شود. این عناصر به موتورهای جستجو و فناوری‌های کمکی کمک می‌کنند تا محتوا را بهتر درک کنند.</p>
-                    
-                    <!-- نمونه کد -->
-                    <pre>
+          <section class="content__box">
+            <h2 class="content__title">مقدمه HTML</h2>
+            <p class="content__paragraph">
+              HTML زبان نشانه‌گذاری است که برای ساخت صفحات وب استفاده می‌شود.
+            </p>
+            <div class="content__box--list">
+              <ul>
+                <li>header برای سر صفحه</li>
+                <li>nav برای منوی ناوبری</li>
+                <li>main برای محتوای اصلی</li>
+                <li>section برای بخش‌بندی محتوا</li>
+                <li>article برای مقالات</li>
+                <li>aside برای محتوای جانبی</li>
+                <li>footer برای پای صفحه</li>
+              </ul>
+            </div>
+          </section>
+
+          <article class="article__card">
+            <h2 class="content__title">مقدمه HTML</h2>
+            <p class="content__paragraph">
+              استفاده از عناصر سمانتیک HTML باعث بهبود دسترسی، SEO و خوانایی کد
+              می‌شود. این عناصر به موتورهای جستجو و فناوری‌های کمکی کمک می‌کنند
+              تا محتوا را بهتر درک کنند.
+            </p>
+
+            <pre>
 &lt;article&gt;
     &lt;h2&gt;عنوان مقاله&lt;/h2&gt;
     &lt;p&gt;محتوای مقاله...&lt;/p&gt;
     &lt;time datetime="2024-01-01"&gt;تاریخ انتشار&lt;/time&gt;
-&lt;/article&gt;
-                    </pre>
-                    
-                    <!-- تاریخ انتشار -->
-                    <time datetime="2024-01-15" class="time-badge">1402/10/25</time>
-                </article>
+&lt;/article&gt;    
+            </pre>
+            <time datetime="2024-01-15" class="time__badge">1402/10/25</time>
+          </article>
 
-                <!-- بخش جزئیات قابل گسترش -->
-                <details open class="details-section">
-                    <summary class="details-header">راهنمای تگ‌های HTML</summary>
-                    <div class="details-content">
-                        <p>در این بخش می‌توانید اطلاعات تکمیلی درباره تگ‌های مختلف HTML را مطالعه کنید:</p>
-                        <ul>
-                            <li>&lt;time&gt; برای نمایش تاریخ و زمان</li>
-                            <li>&lt;figure&gt; برای تصاویر با توضیح</li>
-                            <li>&lt;details&gt; برای محتوای قابل باز و بسته شدن</li>
-                        </ul>
-                    </div>
-                </details>
-
-                <!-- تصویر دیگر با توضیح -->
-                <figure class="image-container">
-                    <img class="main-image" src="./images/Browser stats-rafiki.svg" alt="نمودار عناصر سمانتیک" />
-                    <figcaption>نمودار ساختار عناصر سمانتیک HTML</figcaption>
-                </figure>
+          <details open class="content__details">
+            <summary class="details__header">راهنمای تگ‌های HTML</summary>
+            <div class="details__content">
+              <p>
+                در این بخش می‌توانید اطلاعات تکمیلی درباره تگ‌های مختلف HTML را
+                مطالعه کنید:
+              </p>
+              <ul>
+                <li>&lt;time&gt; برای نمایش تاریخ و زمان</li>
+                <li>&lt;figure&gt; برای تصاویر با توضیح</li>
+                <li>&lt;details&gt; برای محتوای قابل باز و بسته شدن</li>
+              </ul>
             </div>
+          </details>
 
-            <!-- نوار کناری -->
-            <aside class="sidebar-area">
-                <h3>منابع مفید</h3>
-                <p>در این بخش لینک‌های مرتبط و اطلاعات تکمیلی قرار دارد.</p>
-                
-                <!-- تصویر نوار کناری -->
-                <figure>
-                    <img class="sidebar-image" src="./images/Source code-rafiki (1).svg" alt="منابع یادگیری" />
-                    <figcaption>منابع یادگیری HTML</figcaption>
-                </figure>
-                
-                <!-- جزئیات اضافی -->
-                <details class="details-section">
-                    <summary class="details-header">لینک‌های مفید</summary>
-                    <div class="details-content">
-                        <ul>
-                            <li>MDN Web Docs</li>
-                            <li>W3Schools</li>
-                            <li>HTML Validator</li>
-                        </ul>
-                    </div>
-                </details>
-                
-                <!-- زمان آخرین به‌روزرسانی -->
-                <p>آخرین به‌روزرسانی:</p>
-                <time datetime="2024-01-15" class="time-badge">1402/10/25</time>
-            </aside>
+          <figure class="content__main--image">
+            <img
+              class="main__image"
+              src="./images/Browser stats-rafiki.svg"
+              alt="نمودار عناصر سمانتیک"
+            />
+            <figcaption>نمودار ساختار عناصر سمانتیک HTML</figcaption>
+          </figure>
         </div>
+        <aside class="content__sidebar">
+          <h3>منابع مفید</h3>
+          <p>در این بخش لینک‌های مرتبط و اطلاعات تکمیلی قرار دارد.</p>
+
+          <figure class="content__main--image">
+            <img
+              class="main__image"
+              src="./images/Source code-rafiki (1).svg"
+              alt="منابع یادگیری"
+            />
+            <figcaption>منابع یادگیری HTML</figcaption>
+          </figure>
+
+          <details open class="content__details">
+            <summary class="details__header">لینک‌های مفید</summary>
+            <div class="details__content">
+              <ul>
+                <ul>
+                  <li>MDN Web Docs</li>
+                  <li>W3Schools</li>
+                  <li>HTML Validator</li>
+                </ul>
+              </ul>
+            </div>
+          </details>
+          <p>آخرین به‌روزرسانی:</p>
+          <time datetime="2024-01-15" class="time__badge">1402/10/25</time>
+        </aside>
+      </div>
     </main>
 
-    <!-- پای صفحه -->
-    <footer class="footer-section">
-        <p>تمامی حقوق محفوظ است.</p>
-        <p>برای تماس: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>&copy; 2022 وب‌سایت آموزش HTML</p>
+    <footer class="footer">
+      <p>تمامی حقوق محفوظ است.</p>
+      <p>برای تماس: <a href="mailto:info@example.com">info@example.com</a></p>
+      <p>&copy; 2022 وب‌سایت آموزش HTML</p>
     </footer>
-</body>
+  </body>
 </html>
