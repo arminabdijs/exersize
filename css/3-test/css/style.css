@@ -1,7 +1,15 @@
-/* Element selector */
-p {
-  font-size: 22px;
-  color: rgb(255, 0, 132);
+/* All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Grouping */
+h1, h2 {
+  font-family: "JetBrains Mono", sans-serif;
+  color: aqua;
 }
 
 /* ID selector */
@@ -10,56 +18,6 @@ p {
   text-align: center;
 }
 
-/* Class selector */
-.myclass {
-  color: green;
-}
-
-p.myclass {
-  background-color: brown;
-}
-
-/* All Elements */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Grouping */
-h1, h2 {
-  font-family: "JetBrains Mono", sans-serif;
-  color: aqua;
-}
-
-/* element element */
-.mysection .content-1, .mysection .content-2 {
-  color: red;
-}
-
-/* element > element */
-.mysection > div {
-  background-color: lightgreen;
-  margin: 10px 0;
-}
-
-/* element1 + element2 */
-h1 + h2 {
-  color: yellow;
-}
-
-/* element1 ~ element2 */
-h1 ~ h2 {
-  background-color: #222;
-}
-
-/* Color */
-.paragraph {
-  color: #ffde22;
-  font-size: 1.5em;
-  border: 5px double #de0c0c;
-  background-color: #ff0084;
-}
 
 /* Background image + clip-path */
 .mybg {
@@ -82,8 +40,33 @@ h1 ~ h2 {
   background-blend-mode: darken;
 }
 
-.mybg h1 {
-  text-align: center;
-  padding: 40px;
-  color: aquamarine;
+
+/* Class selector */
+.myclass {
+  color: green;
+}
+
+/* Color */
+.paragraph {
+  color: #ffde22;
+  font-size: 1.5em;
+  border: 5px double #de0c0c;
+  background-color: #ff0084;
+}
+
+
+/* element > element */
+.mysection > div {
+  background-color: lightgreen;
+  margin: 10px 0;color: red;
+}
+
+/* element1 + element2 */
+h1 + h2 {
+  color: yellow;
+}
+
+/* element1 ~ element2 */
+h1 ~ h2 {
+  background-color: #222;
 }
