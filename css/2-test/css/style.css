@@ -1,25 +1,4 @@
-/* Element selector */
-p {
-  font-size: 45px;
-  color: aquamarine;
-}
-
-/* ID selector */
-#mytext {
-  color: blue;
-}
-
-/* Class selector */
-.myclass {
-  color: green;
-}
-
-/* Combination: element + class */
-p.myclass {
-  background-color: brown;
-}
-
-/* All elements selector */
+ /* All elements selector */
 * {
   box-sizing: border-box;
 }
@@ -30,25 +9,34 @@ h1, h2 {
   color: aqua;
 }
 
+/*Element selector */
+p {
+  font-size: 45px;
+  color: aquamarine;
+}
+
+/* ID selector */
+#mytext {
+  color: blue;
+}
+
+/* Combination: element + class */
+p.myclass {color: green;
+  background-color: brown;
+}
+
+
+
 /* Descendant selector */
 .mysection .content-1,
 .mysection .content-2 {
-  color: red;
+  color: red;  background-color: lightgreen;
 }
 
-/* Child selector */
-.mysection > div {
-  background-color: lightgreen;
-}
 
 /* Adjacent sibling */
 h1 + h2 {
   color: yellow;
-}
-
-/* General sibling */
-h1 ~ h2 {
-  font-style: italic;
 }
 
 /* Background image section */
@@ -62,7 +50,3 @@ h1 ~ h2 {
   background-size: 100%;
 }
 
-/* h1 inside background section */
-.mybg h1 {
-  color: aquamarine;
-}

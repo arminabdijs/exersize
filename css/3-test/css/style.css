@@ -61,12 +61,15 @@ h1, h2 {
   margin: 10px 0;color: red;
 }
 
-/* element1 + element2 */
-h1 + h2 {
-  color: yellow;
+.mysection ~ h1{
+  margin-top:  15px;
+}
+.mysection ~ h2{
+  margin-bottom:  15px;
 }
 
-/* element1 ~ element2 */
-h1 ~ h2 {
-  background-color: #222;
+/* element1 + element2 */
+h1 + h2 {
+  color: yellow;  background-color: #222;
+
 }
