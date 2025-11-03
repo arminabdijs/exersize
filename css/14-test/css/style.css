@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/images/photo-1495474472287-4d71bcdd2085.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+.card {
+    width: 600px;
+    background-color: white;
+    margin: auto;
+    border-radius: 30px;
+    padding: 15px;
+    border: 8px solid #ff6b35;
+    position: relative;
+}
+
+.badge {
+    width: 100px;
+    height: 100px;
+    background-color: #ff1744;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 8px double #ffbe0b;
+    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge p {
+    font-size: 28px;
+    color: #ffbe0b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff6b35;
+    text-shadow: 3px 3px 0px #ffbe0b;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    background-color: rgba(255, 190, 11, 0.2);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 3px dashed #ff6b35;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #ff6b35;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.price {
+    font-size: 24px;
+    color: #ff6b35;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    margin-top: 15px;
+}
+
+li {
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ff6b35;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ffbe0b;
+    color: black;
+}
+
+button:active {
+    background-color: #06ffa5;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ff6b35;
+}
+
+.footer a {
+    color: #ff6b35;
+    text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.footer a:hover {
+    color: #ffbe0b;
+}
