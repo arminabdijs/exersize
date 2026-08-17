@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>فرم ثبت نام</title>
+
+    <style>
+      @font-face {
+        font-family: "arad";
+        src: url("/");
+      }
+      * {
+        box-sizing: border-box;
+        font-family: ;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #13fb8b;
+      }
+
+      form {
+        width: 90%;
+        max-width: 350px;
+        background: white;
+        padding: 22px;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0 0 18px;
+        color: #1e293b;
+        font-size: 20px;
+      }
+
+      .field {
+        margin-bottom: 12px;
+      }
+
+      label {
+        display: block;
+        font-size: 13px;
+        color: #475569;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        height: 38px;
+        padding: 0 10px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        outline: none;
+        background: #f8fafc;
+      }
+
+      input:focus {
+        border-color: #2563eb;
+        background: white;
+      }
+
+      input:disabled {
+        background: #e2e8f0;
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="" method="post" autocomplete="on">
+      <h2>ثبت نام</h2>
+
+      <div class="field">
+        <label for="username"> نام کاربری </label>
+
+        <input type="text" id="username" name="username" placeholder="نام کاربری" minlength="4" maxlength="10" />
+      </div>
+
+      <div class="field">
+        <label for="readonly"> نام پیش فرض </label>
+
+        <input type="text" id="readonly" value="admin" readonly />
+      </div>
+
+      <div class="field">
+        <label for="disabled"> وضعیت حساب </label>
+
+        <input type="text" id="disabled" placeholder="غیرفعال" disabled />
+      </div>
+
+      <div class="field">
+        <label for="name"> نام نمایشی </label>
+
+        <input type="text" id="name" placeholder="نام شما" autofocus />
+      </div>
+
+      <div class="field">
+        <label for="fullname"> نام خانوادگی </label>
+
+        <input type="text" id="fullname" placeholder="علی احمدی" pattern="(\w{3,16})([ ]{0,3})(\w{3,16})" required />
+      </div>
+
+      <button>ارسال</button>
+    </form>
+  </body>
+</html>
