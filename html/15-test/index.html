@@ -1,18 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
+      *,
+      *::after,
+      *::before {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
       body {
-        font-family: IRANSansX, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         background-color: #89f7fe;
         direction: rtl;
       }
@@ -24,6 +26,7 @@
         border-radius: 25px;
         padding: 25px 30px;
       }
+
       h2 {
         text-align: center;
         color: #3b3b98;
@@ -48,24 +51,24 @@
         margin-bottom: 18px;
         font-size: 18px;
       }
-      pre {
-        background-color: #222;
-        color: #70ffb8;
-        border-radius: 14px;
-        padding: 16px 20px;
-        margin: 20px 0;
-      }
 
-      code,
       kbd,
+      pre,
       var,
+      code,
       samp {
         display: block;
         background-color: #222;
         color: #70ffb8;
-        padding: 12px 18px;
         border-radius: 12px;
+        padding: 12px 18px;
         margin: 12px 0;
+      }
+
+      pre {
+        border-radius: 14px;
+        padding: 16px 20px;
+        margin: 20px 0;
       }
 
       video {
@@ -87,6 +90,7 @@
         margin: 0 15px;
         color: #3b3b98;
       }
+
       .footer {
         text-align: center;
         margin-top: 50px;
@@ -99,37 +103,34 @@
     <div class="container">
       <h2>تمرین پروژه HTML و CSS - نسخه جذاب‌تر</h2>
       <div class="image-box">
-        <img
-          src="./assets/images/302012993_514401300604466_768154784961560815_n.png"
-          alt="تصویر نمونه"
-        />
+        <img src="./assets/images/302012993_514401300604466_768154784961560815_n.png" alt="تصویر نمونه" />
       </div>
+
       <div class="box">
-        <p>برای کپی یک متن از کلید ترکیبی 
-          <kbd>Ctrl + C</kbd> 
-                        استفاده کنید.</p>
+        <p>برای کپی یک متن از کلید ترکیبی <kbd>Ctrl + C </kbd> استفاده کنید.</p>
       </div>
+
       <div class="box" dir="ltr">
         <pre>
 function hello() {
     console.log("Welcome to Armin's Project!");
 }
 hello();
-      </pre
-        >
+        </pre>
       </div>
-      <code>console.log("کد نمونه")</code>
+
+      <code dir="ltr">console.log("کد نمونه")</code>
       <samp>"نتیجه کد: Welcome"</samp>
-      <var>var x = 42;</var>
+      <var dir="ltr">var x = 42;</var>
 
       <video
         src="./assets/videos/videoplayback.mp4"
         controls
         preload="metadata"
-        poster="./assets/images/images.png"
-      >
-        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
-      </video>
+        loop
+        muted
+        autoplay
+        poster="./assets/images/images.png"></video>
 
       <ul>
         <li>&copy;</li>

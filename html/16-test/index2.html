@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="تمرین جامع HTML و CSS با موضوع آکادمی برنامه‌نویسی؛ شامل متن، لینک، تصویر، جدول، فهرست، ویدیو، صوت، iframe، SVG و Canvas." />
+    <title>ViraCode Academy | تمرین HTML</title>
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background-color: #f3f6fb;
+        color: #17243a;
+        font-family: Tahoma, Arial, sans-serif;
+        line-height: 1.8;
+      }
+      a {
+        color: #4568e8;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #213fc0;
+      }
+      .page {
+        width: 92%;
+        max-width: 1120px;
+        margin: 24px auto;
+      }
+      .topbar,
+      .panel,
+      .hero,
+      .footer {
+        background-color: #fff;
+        border: 1px solid #e3e9f3;
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(28, 48, 86, 0.07);
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 14px 22px;
+        margin-bottom: 18px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #17243a;
+        font-weight: bold;
+      }
+      .brand-mark {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background-color: #536df0;
+        color: #fff;
+        text-align: center;
+        line-height: 38px;
+        font-size: 20px;
+      }
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        font-size: 13px;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        overflow: hidden;
+        padding: 34px;
+        background-color: #17243f;
+        color: #fff;
+        border: 0;
+      }
+      .hero-copy {
+        flex: 1 1 52%;
+      }
+      .eyebrow {
+        color: #aab8ff;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      h1 {
+        font-size: 35px;
+        line-height: 1.5;
+        margin: 10px 0;
+      }
+      .hero p {
+        color: #d2d9ec;
+        max-width: 570px;
+        margin: 0 0 20px;
+      }
+      .hero strong {
+        color: #fff;
+      }
+      .hero-image {
+        flex: 1 1 48%;
+        text-align: center;
+      }
+      .hero-image img {
+        width: 100%;
+        max-width: 460px;
+        height: 275px;
+        object-fit: cover;
+        border-radius: 17px;
+        border: 4px solid rgba(255, 255, 255, 0.15);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 17px;
+        border-radius: 11px;
+        background-color: #6c82ff;
+        color: #fff;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      .button.secondary {
+        background-color: #263653;
+        border: 1px solid #53617d;
+      }
+      .quick-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 21px;
+      }
+      .quick-info span {
+        display: inline-block;
+        background-color: #263653;
+        color: #e5eaff;
+        border: 1px solid #3c4b6b;
+        padding: 5px 11px;
+        border-radius: 20px;
+        font-size: 11px;
+      }
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 27px 2px 13px;
+      }
+      .section-head h2 {
+        margin: 0;
+        font-size: 21px;
+        color: #17243a;
+      }
+      .section-head small {
+        color: #7b879a;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .course {
+        flex: 1 1 220px;
+        min-width: 0;
+        padding: 19px;
+      }
+      .panel {
+        padding: 20px;
+      }
+      .course .number {
+        color: #536df0;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .course h3 {
+        margin: 5px 0;
+        font-size: 17px;
+      }
+      .course p,
+      .muted {
+        color: #69768b;
+        font-size: 13px;
+        margin: 5px 0 0;
+      }
+      .two-col {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: stretch;
+      }
+      .two-col > .panel {
+        flex: 1 1 340px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin-top: 8px;
+      }
+      caption {
+        color: #536df0;
+        font-weight: bold;
+        padding: 7px;
+      }
+      th,
+      td {
+        border: 1px solid #e3e9f3;
+        padding: 9px 10px;
+        text-align: center;
+      }
+      thead {
+        background-color: #eff2ff;
+        color: #344bb5;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f8faff;
+      }
+      tfoot {
+        background-color: #edf2ff;
+        font-weight: bold;
+      }
+      .lists {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+      }
+      .lists > div {
+        flex: 1 1 175px;
+      }
+      .lists h3 {
+        margin: 0 0 5px;
+        font-size: 15px;
+      }
+      ul,
+      ol,
+      dl {
+        margin: 5px 0;
+        padding-right: 22px;
+        font-size: 13px;
+      }
+      dt {
+        color: #425bd2;
+        font-weight: bold;
+      }
+      dd {
+        margin: 0 0 7px;
+        color: #69768b;
+      }
+      .teacher-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .teacher {
+        flex: 1 1 190px;
+        background-color: #f7f8ff;
+        border: 1px solid #e5e9fa;
+        border-radius: 14px;
+        padding: 14px;
+      }
+      .teacher strong {
+        display: block;
+        color: #263b9a;
+      }
+      .quote {
+        margin: 12px 0 0;
+        padding: 13px 16px;
+        background-color: #f4f6ff;
+        border-right: 4px solid #6579ed;
+        border-radius: 10px;
+        color: #46536b;
+        font-size: 13px;
+      }
+      .media-panel {
+        background-color: #17243f;
+        color: #fff;
+        border: 0;
+      }
+      .media-panel h2,
+      .media-panel h3 {
+        color: #fff;
+      }
+      .media-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .media-grid > div {
+        flex: 1 1 260px;
+        min-width: 0;
+      }
+      video {
+        display: block;
+        width: 100%;
+        border-radius: 13px;
+        background-color: #0c1426;
+      }
+      audio {
+        width: 100%;
+        margin: 8px 0;
+      }
+      iframe {
+        display: block;
+        width: 100%;
+        height: 155px;
+        border: 0;
+        border-radius: 12px;
+        background-color: #fff;
+      }
+      .media-panel p,
+      .media-panel small {
+        color: #c1cbe0;
+      }
+      .tag-lab {
+        font-size: 13px;
+        color: #5c687c;
+      }
+      .tag-lab p {
+        margin: 8px 0;
+      }
+      .tag-lab span {
+        color: #536df0;
+      }
+      .tag-lab mark {
+        background-color: #fff0b8;
+        padding: 2px 5px;
+        border-radius: 4px;
+      }
+      .tag-lab code,
+      .tag-lab samp,
+      .tag-lab var,
+      .tag-lab kbd {
+        display: inline-block;
+        background-color: #202b40;
+        color: #b9f4d2;
+        border-radius: 5px;
+        padding: 3px 7px;
+        font-family: monospace;
+      }
+      .tag-lab pre {
+        white-space: pre-wrap;
+        background-color: #202b40;
+        color: #b9f4d2;
+        border-radius: 10px;
+        padding: 12px;
+        direction: ltr;
+        text-align: left;
+        font-size: 12px;
+      }
+      .tag-lab big {
+        color: #253d9b;
+      }
+      .tag-lab hr {
+        border: 0;
+        border-top: 1px solid #e3e9f3;
+        margin: 13px 0;
+      }
+      .code-panels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .code-panels > .panel {
+        flex: 1 1 250px;
+      }
+      .demo-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      .display-block {
+        display: block;
+        width: 100%;
+        background-color: #edf0ff;
+        padding: 7px;
+        border-radius: 7px;
+        text-align: center;
+      }
+      .display-inline {
+        display: inline;
+        background-color: #e4f6ef;
+        padding: 6px;
+        border-radius: 6px;
+      }
+      .display-inline-block {
+        display: inline-block;
+        background-color: #fff0dc;
+        padding: 8px 12px;
+        border-radius: 7px;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        max-width: 320px;
+        height: 125px;
+        margin: 10px auto 0;
+        border: 1px solid #d9e0ed;
+        border-radius: 12px;
+        background-color: #f2f5ff;
+      }
+      .footer {
+        margin-top: 25px;
+        padding: 20px;
+        text-align: center;
+        color: #7b879a;
+        font-size: 12px;
+      }
+      .footer address {
+        font-style: normal;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topbar" id="top">
+        <div class="brand">
+          <span class="brand-mark">V</span>
+           ViraCode Academy</div>
+        <div class="nav">
+          <a href="#courses">دوره‌ها</a>
+          <a href="#students">هنرجویان</a>
+          <a href="#media">رسانه</a>
+          <a href="#contact">ارتباط</a>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-copy">
+          <small class="eyebrow">LEARN · BUILD · GROW</small>
+          <h1>آینده‌ات را با <span style="color: #aab8ff">برنامه‌نویسی</span> بساز.</h1>
+          <p>
+            در <strong>آکادمی ویراکد</strong> مهارت‌های طراحی وب را با آموزش پروژه‌محور یاد بگیر؛ از ساختار HTML تا
+            طراحی رابط کاربری.
+          </p>
+          <div class="actions">
+            <a class="button" href="#courses">مشاهده دوره‌ها</a>
+            <a class="button secondary" href="#media">تماشای ویدیو معرفی</a>
+          </div>
+          <div class="quick-info"><span>۳ دوره فعال</span><span>۱۲۸ هنرجو</span><span>آموزش پروژه‌محور</span></div>
+        </div>
+        <div class="hero-image">
+          <picture>
+            <source
+              srcset="./assets/images/1-h.avif"
+              media="(min-width: 1200px)" />
+            <source
+              srcset="./assets/images/2-h.avif"
+              media="(min-width: 760px)" />
+            <img
+              src="./assets/images/3-h.avif"
+              alt="هنرجویان در حال یادگیری برنامه‌نویسی" />
+          </picture>
+        </div>
+      </div>
+
+      <div class="section-head" id="courses">
+        <h2>مسیرهای یادگیری</h2>
+        <small>از پایه تا ساخت اولین پروژه</small>
+      </div>
+      <div class="cards">
+        <div class="panel course">
+          <span class="number">01 / STRUCTURE</span>
+          <h3>HTML پایه</h3>
+          <p>ساختار صفحه، متن‌ها، لینک‌ها، تصاویر و جدول‌ها.</p>
+        </div>
+        <div class="panel course">
+          <span class="number">02 / DESIGN</span>
+          <h3>CSS مقدماتی</h3>
+          <p>رنگ، فاصله، کادرها، کلاس‌ها و چیدمان Flexbox.</p>
+        </div>
+        <div class="panel course">
+          <span class="number">03 / MEDIA</span>
+          <h3>محتوای چندرسانه‌ای</h3>
+          <p>نمایش تصویر، ویدیو، صوت و محتوای تعبیه‌شده.</p>
+        </div>
+      </div>
+
+      <div class="section-head" id="students">
+        <h2>گزارش عملکرد هنرجویان</h2>
+        <small>نمونه جدول با سرستون، بدنه و جمع‌بندی</small>
+      </div>
+      <div class="panel">
+        <table>
+          <caption>
+            ارزیابی پایان دوره HTML
+          </caption>
+          <thead>
+            <tr>
+              <th>شناسه</th>
+              <th>نام هنرجو</th>
+              <th>نمره</th>
+              <th>وضعیت</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>۱۰۱</td>
+              <td><strong>سارا احمدی</strong></td>
+              <td><mark>۹۵</mark></td>
+              <td><ins>قبول</ins></td>
+            </tr>
+            <tr>
+              <td>۱۰۲</td>
+              <td>علی رضایی</td>
+              <td>۸۶</td>
+              <td><ins>قبول</ins></td>
+            </tr>
+            <tr>
+              <td>۱۰۳</td>
+              <td>نیما کریمی</td>
+              <td>۵۸</td>
+              <td><del>نیازمند تمرین</del></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">میانگین کلاس</td>
+              <td>۷۹٫۶</td>
+              <td>۳ هنرجو</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <div class="section-head">
+        <h2>برنامه و سرفصل‌ها</h2>
+        <small>تمرین انواع فهرست و شماره‌گذاری</small>
+      </div>
+      <div class="panel lists">
+        <div>
+          <h3>سرفصل‌ها</h3>
+          <ul>
+            <li>ساختار HTML</li>
+            <li>متن و پیوندها</li>
+            <li>تصویر و رسانه</li>
+          </ul>
+        </div>
+        <div>
+          <h3>مراحل پروژه</h3>
+          <ol type="A">
+            <li>طراحی ساختار</li>
+            <li>افزودن محتوا</li>
+            <li>زیباسازی</li>
+          </ol>
+          <p class="muted">انواع شماره‌گذاری: <b>a</b>، <b>1</b>، <b>I</b> و <b>i</b></p>
+          <ol type="a">
+            <li>نمونه حروف کوچک</li>
+          </ol>
+          <ol type="1">
+            <li>نمونه عددی</li>
+          </ol>
+          <ol type="I">
+            <li>نمونه رومی بزرگ</li>
+          </ol>
+          <ol type="i">
+            <li>نمونه رومی کوچک</li>
+          </ol>
+        </div>
+        <div>
+          <h3>واژه‌نامه</h3>
+          <dl>
+            <dt>HTML</dt>
+            <dd>زبان نشانه‌گذاری صفحات وب</dd>
+            <dt>CSS</dt>
+            <dd>زبان استایل‌دهی صفحات</dd>
+            <dt>Flexbox</dt>
+            <dd>روش چیدمان انعطاف‌پذیر</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>مدرسان آکادمی</h2>
+        <small>آشنایی با تیم آموزشی</small>
+      </div>
+      <div class="teacher-row">
+        <div class="panel teacher">
+          <strong>آرمین عبدی</strong><span class="muted">مدرس HTML و CSS</span>
+          <p class="muted">تمرکز بر مبانی و پیاده‌سازی رابط کاربری.</p>
+        </div>
+        <div class="panel teacher">
+          <strong>رضا زانکو</strong><span class="muted">مدرس توسعه وب</span>
+          <p class="muted">آموزش ساختار پروژه و تفکر برنامه‌نویسی.</p>
+        </div>
+      </div>
+      <blockquote class="quote">
+        <q>به‌جای حفظ کردن تگ‌ها، با آن‌ها چیزی واقعی بساز.</q> <cite>— شعار آکادمی ویراکد</cite>
+      </blockquote>
+
+      <div class="section-head" id="media">
+        <h2>استودیو رسانه</h2>
+        <small>ویدیو، فایل صوتی و iframe</small>
+      </div>
+      <div class="panel media-panel">
+        <div class="media-grid">
+          <div>
+            <h3>ویدیو معرفی دوره</h3>
+            <video
+              controls
+              loop
+              muted
+              preload="metadata"
+              poster="./assets/images/v-1.avif"
+              width="640"
+              height="360">
+              <source src="assets/videos/flower.mp4" type="video/mp4" />
+              مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+            </video>
+
+          </div>
+          <div>
+            <h3>پادکست کوتاه آکادمی</h3>
+            <p>برای آزمایش پخش‌کننده صوت، دکمه پخش را انتخاب کن.</p>
+            <audio
+              src="./assets/audio/Imagine Dragons Enemy (feat. JID) 320.mp3"
+              controls
+              preload="metadata">
+              مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
+            </audio>
+            <!-- نمونه ویژگی‌های loop و muted: <audio src="./assets/audio/intro.mp3" controls loop muted>Audio</audio> -->
+            <small>نمونه صوتی آزمایشی؛ امکان جایگزینی با فایل MP3 دلخواه وجود دارد.</small>
+            <h3>نمایش صفحه در iframe</h3>
+            <iframe src="https://en.wikipedia.org/wiki/HTML" width="560" height="155" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>آزمایشگاه تگ‌های HTML</h2>
+        <small>مرور فشرده تگ‌های متنی و نمایشی</small>
+      </div>
+      <div class="panel tag-lab">
+        <p>
+          <b>متن برجسته</b>، <strong>اهمیت معنایی</strong>، <i>حالت مورب</i>، <em>تأکید</em>، <u>زیرخط</u>،
+          <s>اطلاعات قدیمی</s>، <del>حذف‌شده</del> و <ins>افزوده‌شده</ins>.
+        </p>
+        <p>
+          <span>متن رنگی با span</span>، <mark>متن نشان‌گذاری‌شده</mark>، <small>متن کوچک</small>، <big>متن بزرگ</big>،
+          H<sub>2</sub>O و ۲<sup>۳</sup>.
+        </p>
+        <p title="توضیح کوتاه درباره HTML">
+          <dfn>HTML</dfn> یک زبان نشانه‌گذاری است؛ <abbr title="HyperText Markup Language">HTML</abbr> را می‌توان با
+          توضیح کامل در ویژگی title معرفی کرد. منبع: <cite>مستندات آموزشی آکادمی</cite>.
+        </p>
+        <p>
+          میان‌بر کپی: <kbd>Ctrl + C</kbd> | خروجی نمونه: <samp>Welcome!</samp> | کد:
+          <code>console.log("Hello")</code> | متغیر: <var>x = 5</var>
+        </p>
+        <pre>
+نام پروژه: ViraCode
+وضعیت: آماده اجرا
+فناوری: HTML + CSS</pre
+        >
+        <div>
+          <small>نمونه سطوح تیتر:</small>
+          <h4>تیتر چهارم</h4>
+          <h5>تیتر پنجم</h5>
+          <h6>تیتر ششم</h6>
+        </div>
+        <hr />
+        <p>نمونه متن دارای شکست خط:<br />خط دوم متن در همان پاراگراف.</p>
+        <p>علامت‌ها: &copy; حقوق محفوظ است. &reg; نام تجاری ثبت‌شده.</p>
+        <p>
+          پیوند بیرونی: <a href="https://www.w3.org/" target="_blank" title="وب‌سایت رسمی W3C">W3C</a> |
+          <a href="./assets/files/academy-guide.txt" download>دانلود راهنمای متنی</a> |
+          <a href="mailto:hello@example.com">ایمیل</a> | <a href="tel:+989000000000">تماس</a>
+        </p>
+        <address>نشانی آموزشی: ایران، همدان — <a href="https://example.com" target="_blank">وب‌سایت آکادمی</a></address>
+        <!-- تگ center در HTML5 منسوخ است و فقط برای شناخت نمونه قدیمی در کامنت نگه داشته شده است: <center>متن</center> -->
+      </div>
+
+      <div class="section-head">
+        <h2>تصویر، SVG و Canvas</h2>
+        <small>تمرین تصویر جایگزین و گرافیک ساده</small>
+      </div>
+      <div class="code-panels">
+        <div class="panel">
+          <h3>تصویر و متن جایگزین</h3>
+          <img
+            src="./assets/images/2-h.avif"
+            alt="محیط کار برنامه‌نویسی"
+            width="650"
+            style="display: block; width: 100%; border-radius: 12px" />
+          <p class="muted">ویژگی alt برای توصیف تصویر در دسترس‌پذیری استفاده می‌شود.</p>
+        </div>
+        <div class="panel">
+          <h3>SVG و Canvas</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 120 70"
+            width="120"
+            stroke-width="4"
+            stroke="#536df0">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M10 35 L35 10 L60 35 L85 10 L110 35 L85 60 L60 35 L35 60 Z" />
+          </svg>
+          <canvas id="canvas" width="320" height="125">مرورگر شما از Canvas پشتیبانی نمی‌کند.</canvas>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>نمایش رفتار عناصر</h2>
+        <small>تفاوت Block، Inline و Inline-block</small>
+      </div>
+      <div class="panel">
+        <span class="display-block">عنصر Block تمام عرض ردیف را می‌گیرد.</span>
+        <div class="demo-box">
+          <span class="display-inline">Inline</span><span class="display-inline">Inline</span
+          ><span class="display-inline-block">Inline-block</span>
+        </div>
+      </div>
+
+      <div class="section-head" id="contact">
+        <h2>ارتباط با آکادمی</h2>
+        <small>لینک داخلی، ایمیل، تلفن و بازگشت به بالا</small>
+      </div>
+      <div class="footer">
+        <address>ViraCode Academy · آموزش مهارت‌های طراحی وب</address>
+        <p>
+          <a href="mailto:hello@example.com">hello@example.com</a> · <a href="tel:+989000000000">تماس با آکادمی</a> ·
+          <a href="#top">بازگشت به بالای صفحه ↑</a>
+        </p>
+        <small>© 2026 ViraCode Academy — تمامی حقوق محفوظ است.</small>
+      </div>
+    </div>
+
+    <script>
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#536df0';
+      ctx.fillRect(18, 18, 125, 88);
+      ctx.fillStyle = '#18a889';
+      ctx.fillRect(165, 38, 125, 68);
+    </script>
+  </body>
+</html>
